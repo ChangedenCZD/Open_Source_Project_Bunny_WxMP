@@ -1,0 +1,13 @@
+
+<!--pages/follow/index.wxml-->
+<view class="container bg-default">
+  <view class="follow r-between pdt10 pdl10 pdr10 {{idx>=followList.length-1?'pdb10':''}}" wx:for="{{followList}}" wx:for-item="item" wx:for-index="idx" wx:key="follow">
+    <view class="item clickable w100 r-between bg-white br5" bindtap="onItemClick" data-id="{{item.userid}}">
+      <image class="avatar mg10" src="{{item.avatarUrl}}" data-id="{{item.userid}}"></image>
+      <view class="info flex1 c-center" data-id="{{item.userid}}">
+        <text class="fs-11" data-id="{{item.userid}}">{{item.nickName}}</text>
+        <text class="fs-9 text-hint pdt5" data-id="{{item.userid}}">动态发布：{{item.postCount}}</text>
+      </view>
+    </view>
+  </view>
+</view>

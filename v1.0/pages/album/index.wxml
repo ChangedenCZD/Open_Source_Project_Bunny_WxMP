@@ -1,0 +1,17 @@
+
+<!--pages/album/index.wxml-->
+<view class="container bg-default">
+  <view class="post r-between pd10" wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx" wx:key="post">
+    <view class="item w100 c-center bg-white br5">
+      <view class="line f-r w100">
+        <text class="fs-10 mg10">{{item.description}}</text>
+      </view>
+      <view class="line w100">
+        <image class="image mgl10 mgb10" style="width:{{imgSize}}px;height:{{imgSize}}px;" src="{{image}}" wx:for="{{item.images}}" wx:for-item="image" wx:for-index="imgIdx" wx:key="image" catchtap="onImageClick" data-path="{{image}}" data-idx="{{idx}}" wx:if="{{image}}"></image>
+      </view>
+      <view class="date-area w100 r-between">
+        <text class="fs-9 text-hint mg10">{{item.time}}</text>
+      </view>
+    </view>
+  </view>
+</view>

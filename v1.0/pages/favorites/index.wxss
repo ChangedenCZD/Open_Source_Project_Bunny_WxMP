@@ -1,0 +1,26 @@
+/* pages/favorites/index.wxss */
+.post .item {
+  box-shadow: 0px 0px 10rpx #ccc;
+}
+
+.add-icon {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 3;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50rpx;
+}
+
+.item .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.item .menu {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 10rpx;
+}

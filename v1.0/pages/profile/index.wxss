@@ -1,0 +1,15 @@
+/* pages/profile/index.wxss */
+@import "../../home/square/index.wxss";
+
+.item {
+  box-shadow: 0px 0px 10rpx #ccc;
+}
+
+.avatar {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.info {
+  align-items: unset;
+}

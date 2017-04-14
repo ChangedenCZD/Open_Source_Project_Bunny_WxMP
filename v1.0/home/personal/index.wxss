@@ -1,0 +1,20 @@
+/* home/personal/index.wxss */
+
+page {
+  overflow: hidden;
+}
+
+.clickable {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.userInfo .avatar {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.icon {
+  width: 40rpx;
+  height: 40rpx;
+}

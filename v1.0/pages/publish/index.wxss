@@ -1,0 +1,25 @@
+/* pages/publish/index.wxss */
+
+.choose-img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.text-area {
+  min-height: 333rpx;
+}
+
+.operation-area, .pub-area {
+  justify-content: unset;
+}
+
+.commit-btn {
+  margin: 0;
+}
+
+.image-area .item {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+}

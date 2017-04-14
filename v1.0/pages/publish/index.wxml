@@ -1,0 +1,18 @@
+
+<!--pages/publish/index.wxml-->
+<view class="container">
+  <view class="r-between pd10 bg-white">
+    <textarea class="text-area fs-11 w100" placeholder="写你所想" auto-focus maxlength="200" bindinput="onDescInput" value="{{desc}}" />
+  </view>
+  <view class="image-area pd10" wx:if="{{images.length>0}}">
+    <image class="item" src="{{item}}" wx:for="{{images}}" wx:for-item="item" wx:for-index="idx" wx:key="image" data-id="{{idx}}" bindtap="onImgItemClick"></image>
+  </view>
+  <view class="operation-area r-between pd10 fs-9">
+    <image class="choose-img mgr10" src="../../res/img/entrance/icon_pic.png" catchtap="onChooseImg"></image>
+    <view class="pub-area r-between flex1 mgl10">
+      <switch class="" checked="{{isPub}}" bindchange="onPubChange" color="#fe5621" type="checkbox" />
+      <text class="" catchtap="onPubChange">{{isPub?'公开':'私有'}}</text>
+    </view>
+    <button class="commit-btn fs-9" type="orange" catchtap="commit">发布</button>
+  </view>
+</view>

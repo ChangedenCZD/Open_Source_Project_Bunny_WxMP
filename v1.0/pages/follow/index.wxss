@@ -1,0 +1,15 @@
+/* pages/follow/index.wxss */
+
+.follow .item {
+  box-shadow: 0px 0px 10rpx #ccc;
+}
+
+.item .avatar {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 40rpx;
+}
+
+.item .info {
+  align-items: unset;
+}

@@ -1,0 +1,38 @@
+
+<!--pages/profile/index.wxml-->
+<view class="container bg-default">
+  <view class="profile r-between pd10" wx:if="{{profile&&profile.nickName}}">
+    <view class="item clickable w100 r-between bg-white br5">
+      <image class="avatar mg10" src="{{profile.avatarUrl}}"></image>
+      <view class="info c-center flex1">
+        <text class="fs-12 pdb10">{{profile.nickName}}</text>
+        <text class="fs-9 text-hint">首次登录：{{profile.createTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="post r-between pdt10 pdl10 pdr10 {{idx>=postList.length-1?'pdb10':''}}" wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx" wx:key="post">
+    <view class="item w100 c-center bg-white br5">
+      <view class="line r-between w100 pdt10">
+        <image class="avatar mgl10 mgr10" src="{{item.avatarUrl}}"></image>
+        <view class="flex1 f-c">
+          <text class="fs-11 pdb5">{{item.nickName}}</text>
+          <text class="fs-9 text-hint">更新时间：{{item.time}}</text>
+        </view>
+        <image class="menu mgr5" src="../../res/img/icon_menu.png" catchtap="onItemMenuClick" data-idx="{{idx}}"></image>
+      </view>
+      <view class="line f-r w100">
+        <text class="fs-10 mg10">{{item.description}}</text>
+      </view>
+      <view class="line w100">
+        <image class="image mgl10 mgb10" style="width:{{imgSize}}px;height:{{imgSize}}px;" src="{{image}}" wx:for="{{item.images}}" wx:for-item="image" wx:for-index="imgIdx" wx:key="image" catchtap="onImageClick" data-path="{{image}}" data-idx="{{idx}}" wx:if="{{image}}"></image>
+      </view>
+      <view class="operation-area r-between w100">
+        <view class="icons-area flex1 mgl10">
+          <image class="more-icon mgr10" src="../../res/img/icon_like_fill.png" wx:if="{{item.isLike}}"></image>
+          <image class="more-icon mgr10" src="../../res/img/icon_star_fill.png" wx:if="{{item.isFollow}}"></image>
+          <image class="more-icon" src="../../res/img/icon_fav_fill.png" wx:if="{{item.isFav}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

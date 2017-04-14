@@ -1,0 +1,16 @@
+
+<!--home/personal/index.wxml-->
+<view class="container">
+  <view class="userInfo clickable r-between bg-white mgt10 pd10 w100" bindtap="onEntranceClick" data-path="{{profilePagePath}}">
+    <image class="avatar mgt5 mgb5" src="{{userInfo.avatarUrl}}" data-path="{{profilePagePath}}"></image>
+    <view class="c-center flex1 pdl10 pdr10" data-path="{{profilePagePath}}">
+      <text class="nickName fs-12 w100" data-path="{{profilePagePath}}">{{userInfo.nickName}}</text>
+      <text class="nickName fs-9 w100 pdt5" data-path="{{profilePagePath}}">BunnyID：{{userid}}</text>
+    </view>
+  </view>
+  <view class="clickable r-between bg-white mgt10 w100 pd10" wx:for="{{entrance}}" wx:for-item="item" bindtap="onEntranceClick" data-path="{{item.path}}" wx:key="entrance">
+    <image class="icon" src="../../res/img/entrance/icon_{{item.img}}.png" data-path="{{item.path}}"></image>
+    <text class="flex1 pdl10 pdr10 fs-10" data-path="{{item.path}}">{{item.name}}</text>
+  </view>
+  <view class="mgt10 w100"></view>
+</view>
